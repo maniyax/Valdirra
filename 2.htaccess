@@ -1,0 +1,22 @@
+AddDefaultCharset utf-8
+
+Options -Indexes
+DirectoryIndex index.php
+
+ErrorDocument 402 /index.php
+ErrorDocument 403 /about.php?mod=403
+ErrorDocument 404 /about.php?mod=404
+ErrorDocument 500 /index.php
+
+
+
+
+IndexIgnore *.php
+
+<Limit GET POST PUT>
+order allow,deny
+allow from all
+#deny from 159.224.19.40
+#deny from 93.77.79.25
+#deny from 93.77.73.4
+</Limit>
